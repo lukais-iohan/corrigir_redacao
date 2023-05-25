@@ -7,10 +7,10 @@ def criar_correcao_redacao(redacao):
     # Montar o prompt de acordo com as informações inseridas pelo usuário
     prompt = f"Corrija a redação abaixo levando em consideração os seguintes critérios:\n\n"
 
-    for criterio in st.session_state['critérios']:
+    for criterio in st.session_state['criterios']:
         prompt += f"- {criterio}\n"
 
-    prompt += f"\nTexto Motivador:\n{st.session_state['Textos_Motivadores']}\n\nRedação:\n{redacao}\n\nCorreção:"
+    prompt += f"\nTexto Motivador:\n{st.session_state['textos_motivadores']}\n\nRedação:\n{redacao}\n\nCorreção:"
 
     # Enviar o prompt para a API do OpenAI
     response = openai.Completion.create(
@@ -25,17 +25,13 @@ def criar_correcao_redacao(redacao):
     # Retornar a correção da redação gerada pela API do OpenAI
     return response.choices[0].text
 
-
 # Configurações da página
 st.set_page_config(page_title="Corrija sua redação para concurso!!!", page_icon="📝", layout="wide")
-
-
-
 
 # Título da página
 st.title("Corretor de Redação para Concursos")
 
-### Entrar com as credencias do OPENAI
+# Entrar com as credenciais do OPENAI
 openai.api_key = st.text_input("Insira sua chave da API do OpenAI")
 
 # Entrada do nome da banca
@@ -54,11 +50,12 @@ redacao = st.text_area("Redação do Usuário")
 if st.button("Corrigir Redação"):
     # Validar o tamanho da redação
     if len(redacao) > 2100 or len(redacao) < 1400:
-        st.warning("O tamanho da redação deve estar entre 1400 e 2100 caracteres.") ### equivalante entre 20 a 30 linhas
+        st.warning("O tamanho da redação deve estar entre 1400 e 2100 caracteres.") ### equivalente entre 20 a 30 linhas
     else:
         # Processar os critérios de correção
         criterios = re.split('\n|,', criterios)
         criterios = [criterio.strip() for criterio in criterios if criterio.strip()]
+        num_criterios = len(criterios)
 
         # Armazenar as informações do usuário na sessão do Streamlit
         st.session_state['banca'] = banca
@@ -71,3 +68,13 @@ if st.button("Corrigir Redação"):
         # Exibir a correção da redação na tela
         st.subheader("Correção da Redação")
         st.write(correcao)
+
+        # Calcular e exibir a nota do candidato
+        nota_total = 0
+        for i, criterio in enumerate(criterios):
+            nota = 10 - (len(correcao) / 100) * ((num_criterios - i) / num_criterios)  # Cálculo da nota ponderada
+            nota_total += nota
+
+        nota_final = nota_total / num_criterios
+        st.subheader("Nota")
+        st.write(nota_final)
