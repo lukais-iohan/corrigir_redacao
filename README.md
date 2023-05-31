@@ -29,4 +29,8 @@ $ cd corrigir_redacao
 # No terminal digite:
 $ streamlit run main.py
 ```
-    
+## Como utilizar
+
+# A seguinte janela irá aparecer: 
+
+![](/src/streamlit_window.png)
