@@ -33,4 +33,4 @@ $ streamlit run main.py
 
 A seguinte janela irá aparecer: 
 
-![](src/streamlit_window.png)
+![](src/streamlite_window.png)
