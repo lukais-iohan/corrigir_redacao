@@ -18,7 +18,7 @@ Para utilizar a API é necessário:
     - streamlit
     - re
 
-Com isso, siga os seguintes passos
+Com isso, siga os seguintes passos:
 ```bash
 # Clone ese repositório
 $ git clone <https://github.com/lukais-iohan/corrigir_redacao.git>
@@ -29,8 +29,22 @@ $ cd corrigir_redacao
 # No terminal digite:
 $ streamlit run main.py
 ```
+
+
 ## Como utilizar
 
-A seguinte janela irá aparecer: 
+Ao rodar o código anterior, a seguinte janela irá aparecer: 
 
-![](src/streamlite_window.png)
+![](/src/streamlite_window.png)
+
+As informações necessárias para gerar ou corrigir uma redação baseada no tema escolhido são:
+    
+    1. Chave da OpenAi
+    2. Nome da Banca
+    3. Escolher entre gerar ou corrigir uma redação
+    4. Tema da redação
+    5. Critérios para correção (um por linha)
+
+Com essas informações o usuário deve apertar o botão 'Corrigir Redação'. A redação gerada ou corrigida aparecerá no último campo.
+    
+
