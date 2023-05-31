@@ -31,6 +31,6 @@ $ streamlit run main.py
 ```
 ## Como utilizar
 
-# A seguinte janela irá aparecer: 
+A seguinte janela irá aparecer: 
 
-![](/src/streamlit_window.png)
+![](src/streamlit_window.png)
