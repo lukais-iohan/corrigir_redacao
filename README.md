@@ -35,7 +35,7 @@ $ streamlit run main.py
 
 Ao rodar o código anterior, a seguinte janela irá aparecer: 
 
-![](/src/streamlite_window.png)
+![](/src/streamlit_window.png)
 
 As informações necessárias para gerar ou corrigir uma redação baseada no tema escolhido são:
     
@@ -45,6 +45,6 @@ As informações necessárias para gerar ou corrigir uma redação baseada no te
     4. Tema da redação
     5. Critérios para correção (um por linha)
 
-Com essas informações o usuário deve apertar o botão 'Corrigir Redação'. A redação gerada ou corrigida aparecerá no último campo.
+Com essas informações o usuário deve apertar o botão 'Corrigir Redação' ou 'Gerar Redação'. A redação gerada ou corrigida aparecerá no último campo.
     
 
