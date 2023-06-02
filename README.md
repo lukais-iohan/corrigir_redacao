@@ -4,7 +4,7 @@
 A Redação é uma das etapas de muitas provas conhecidas entre os estudantes. Como exemplo podemos citar o Enem (Exame Nacional do Ensino Médio) que ocorre todos os anos e tem a a redação como uma das ferramentas de avaliação. Além do ENEM, a grande maioria dos concursos utiliza esse tipo de avaliação para selecionar seus candidatos. 
 Para que o candidato obtenha uma boa nota, muitas redações precisam ser escritas e avaliadas por um profissional da língua portuguesa. No entanto, nem todos tem a condição de frequentarem um cursinho, onde há professores aptos a corrigirem as redações, ou mesmo pagar alguém. 
 
-Este repositório dedica-se à construção de uma API que ajude o estudante/candidato a ter sua redação corrigida através do Chat-GPT.
+Este repositório dedica-se à construção de uma aplicação que ajude o estudante/candidato a ter sua redação corrigida através do Chat-GPT.
 
 
 ## Instalação
@@ -47,9 +47,24 @@ As informações necessárias para gerar ou corrigir uma redação baseada no te
 
 Com essas informações o usuário deve apertar o botão 'Corrigir Redação' ou 'Gerar Redação'. A redação gerada ou corrigida aparecerá no último campo.
 
-## Exemplo
+## Demonstração
 
 Para demonstrar o uso da ferramenta, iremos utilizar a opção para gerar redação, O tema escolhido foi o da prova de 2012: O movimento imigratório para o Brasil no século XXI. Seguindo o passo anterior para, e clicando no botão 'Run' no canto superior direito na janela aberta, teremos o seguinte resultado:
 
 ![](/src/redacao.png)
+
+## FAQ
+
+#### Há algum custo na utilização dessa aplicação?
+
+O uso dessa aplicação pode acarretar em eventuais custos ao usuário! No entanto, a OpenAi oferece créditos gratuitos baseados no uso de tokens para quem se cadastra pela primeira vez. Esses custos podem ser monitorados no seu perfil na OpenAi. Caso nao queira correr riscos, tente corrigir ou gerar sua redação diretamente pelo site do ChatGPT seguindo a lógica apresentada anteriormente.
+
+#### Posso substituir meu professor de redação por essa aplicação?
+
+NÃO!!! O desenvolvimento dessa aplicação visa o aprendizado das ferramentas da OpenAi e como podem auxiliar os estudantes e professores. Alem disso, o modelo é baseado na versão antiga do ChatGPT, a qual é deficitaria na compreensão de textos mais complexos. 
+
+## Autores
+
+- [@lukais.iohan](https://www.github.com/lukais-iohan)
+- [@DougFelipe](https://github.com/DougFelipe)
 
