@@ -46,5 +46,10 @@ As informações necessárias para gerar ou corrigir uma redação baseada no te
     5. Critérios para correção (um por linha)
 
 Com essas informações o usuário deve apertar o botão 'Corrigir Redação' ou 'Gerar Redação'. A redação gerada ou corrigida aparecerá no último campo.
-    
+
+## Exemplo
+
+Para demonstrar o uso da ferramenta, iremos utilizar a opção para gerar redação, O tema escolhido foi o da prova de 2012: O movimento imigratório para o Brasil no século XXI. Seguindo o passo anterior para, e clicando no botão 'Run' no canto superior direito na janela aberta, teremos o seguinte resultado:
+
+![](/src/redacao.png)
 
