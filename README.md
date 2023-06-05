@@ -6,6 +6,9 @@ Para que o candidato obtenha uma boa nota, muitas redações precisam ser escrit
 
 Este repositório dedica-se à construção de uma aplicação que ajude o estudante/candidato a ter sua redação corrigida através do Chat-GPT.
 
+Medium artigo: https://medium.com/@lukais.iohan/como-o-chatgpt-pode-auxiliar-estudantes-na-correção-e-geração-de-redações-b0df8d9ef20d
+
+Linkedin post: https://www.linkedin.com/posts/lukas-iohan_como-o-chatgpt-pode-auxiliar-estudantes-na-activity-7071266536467931136-sKaX?utm_source=share&utm_medium=member_desktop
 
 ## Instalação
 
@@ -53,6 +56,14 @@ Para demonstrar o uso da ferramenta, iremos utilizar a opção para gerar redaç
 
 ![](/src/redacao.png)
 
+## Demonstração Vídeo
+
+
+https://github.com/lukais-iohan/corrigir_redacao/assets/50368979/6f7e9a9e-ef78-4735-8320-6a61d544e854
+
+
+
+
 ## FAQ
 
 #### Há algum custo na utilização dessa aplicação?
@@ -62,6 +73,7 @@ O uso dessa aplicação pode acarretar em eventuais custos ao usuário! No entan
 #### Posso substituir meu professor de redação por essa aplicação?
 
 NÃO!!! O desenvolvimento dessa aplicação visa o aprendizado das ferramentas da OpenAi e como podem auxiliar os estudantes e professores. Alem disso, o modelo é baseado na versão antiga do ChatGPT, a qual é deficitaria na compreensão de textos mais complexos. 
+
 
 ## Autores
 
