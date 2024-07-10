@@ -2,6 +2,9 @@ import streamlit as st
 import openai
 import re
 
+# Configurações da página (deve ser a primeira chamada do Streamlit)
+st.set_page_config(page_title="Corrija sua redação para concurso!!!", page_icon="📝", layout="wide")
+
 # Função para criar a correção da redação usando a API do OpenAI
 def criar_correcao_redacao(redacao):
     # Montar o prompt de acordo com as informações inseridas pelo usuário
@@ -13,20 +16,16 @@ def criar_correcao_redacao(redacao):
     prompt += f"\nRedação:\n{redacao}\n\nCorreção:"
 
     # Enviar o prompt para a API do OpenAI
-    response = openai.Completion.create(
-        engine="text-davinci-002",
-        prompt=prompt,
-        temperature=0.5,
-        max_tokens=1024,
-        n=1,
-        stop=None
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": "Você é um assistente que corrige redações."},
+            {"role": "user", "content": prompt}
+        ]
     )
 
     # Retornar a correção da redação gerada pela API do OpenAI
-    return response.choices[0].text
-
-# Configurações da página
-st.set_page_config(page_title="Corrija sua redação para concurso!!!", page_icon="📝", layout="wide")
+    return response.choices[0].message['content']
 
 # Título da página
 st.title("Corretor de Redação")
@@ -100,15 +99,14 @@ elif opcao_redacao == "Gerar Redação":
 
     # Botão para gerar a redação
     if st.button("Gerar Redação") and tema:
-        response = openai.Completion.create(
-            engine="text-davinci-003",
-            prompt=tema,
-            temperature=0.5,
-            max_tokens=1024,
-            n=1,
-            stop=None
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "Você é um assistente que gera redações."},
+                {"role": "user", "content": f"Escreva uma redação sobre o tema: {tema}"}
+            ]
         )
-        redacao = response.choices[0].text.strip()
+        redacao = response.choices[0].message['content'].strip()
 
         # Exibir a redação gerada na tela
         st.subheader("Redação Gerada")
